@@ -153,7 +153,7 @@ cd sleuthkit/
 ./configure --prefix=/usr
 ```
 
-### O resultado final esperado é:
+### O resultado final esperado
 
 ```
 Building:
@@ -322,7 +322,7 @@ exit
 sudo java -jar /usr/src/IPED/target/release/iped-4.2-snapshot/iped.jar -d /home/<usuario>/caso1/teste.img -o /home/<usuario>/caso1/indexado
 ```
 
-## Execução do IPED para análise!
+## Execução do IPED para análise
 
 ```
 sudo java -jar /home/<usuario>/caso1/indexado/iped/lib/iped-search-app.jar 
