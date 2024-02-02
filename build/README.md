@@ -330,7 +330,6 @@ sudo java -jar /home/<usuario>/caso1/indexado/iped/lib/iped-search-app.jar
 
 ## Referências
 
-```
 * https://github.com/sepinf-inc/IPED/wiki/User-Manual#python-modules
 * https://github.com/sepinf-inc/IPED/wiki/Beginner's-Start-Guide
 * https://github.com/sepinf-inc/IPED/
@@ -339,4 +338,3 @@ sudo java -jar /home/<usuario>/caso1/indexado/iped/lib/iped-search-app.jar
 * https://github.com/sepinf-inc/IPED/wiki/Linux
 * https://bell-sw.com/pages/repositories/#apt
 * https://github.com/ninia/jep/wiki/Linux
-```
