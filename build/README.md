@@ -250,9 +250,9 @@ mvn clean install
 
 **OBSERVAÇÃO: em um máquina virtual com 4 VCPUs e 16 GB RAM, a compilação demorou por volta de 90 minutos.**
 
-# Passos pós-compilação
+## Passos pós-compilação
 
-## Configuração básica do IPED
+### Configuração básica do IPED
 
 ```
 vim /usr/src/IPED/target/release/iped-4.2-snapshot/LocalConfig.txt
@@ -263,69 +263,69 @@ tskJarPath = /usr/share/java/sleuthkit-4.12.0.jar
 [...]
 ```
 
-## Criação de diretórios do sistema
+### Criação de diretórios do sistema
 
 ```
 mkdir -p -m 0755 /var/lib/samba/usershares
 ```
 
-## Crição de uma pasta para o caso
+### Crição de uma pasta para o caso
 
 ```
 mkdir -p /home/<usuario>/caso1
 ```
 
-## Criação de um HD virtual para testes
+### Criação de um HD virtual para testes
 
 ```
 dd if=/dev/zero of=/home/<usuario>/caso1/teste.img bs=100M count=1
 ```
 
-### Verifique o arquivo de loop
+#### Verifique o arquivo de loop
 
 ```
 losetup -a
 /dev/loop0: [2050]:3015005 (/home/<usuario>/caso1/teste.img)
 ```
 
-### Formate a partição
+#### Formate a partição
 
 ```
 mkfs.ext4 /dev/loop0
 ```
 
-### Monte a partição do HD virtual
+#### Monte a partição do HD virtual
 
 ```
 mount -t ext4 /dev/loop0 /mnt
 ```
 
-### Verifique a montagem
+#### Verifique a montagem
 
 ```
 mount | grep loop0
 /dev/loop0 on /mnt type ext4 (rw,relatime)
 ```
 
-### Copie conteúdos para o ponto de montagem /mnt para simular um HD qualquer
+#### Copie conteúdos para o ponto de montagem /mnt para simular um HD qualquer
 
 ```
 cp -a <origem> /mnt/
 ```
 
-### Desmonte
+#### Desmonte
 
 ```
 umount /mnt
 ```
 
-### Remova o loop
+#### Remova o loop
 
 ```
 losetup -d /dev/loop0 
 ```
 
-### Saia do root
+#### Saia do root
 
 ```
 exit
@@ -333,19 +333,19 @@ exit
 
 **IPED pronto para indexação!**
 
-# Execução do IPED para indexação
+## Execução do IPED para indexação
 
 ```
 sudo java -jar /usr/src/IPED/target/release/iped-4.2-snapshot/iped.jar -d /home/<usuario>/caso1/teste.img -o /home/<usuario>/caso1/indexado
 ```
 
-# Execução do IPED para análise
+## Execução do IPED para análise
 
 ```
 sudo java -jar /home/<usuario>/caso1/indexado/iped/lib/iped-search-app.jar 
 ```
 
-# Referências
+## Referências
 
 * https://github.com/sepinf-inc/IPED/wiki/User-Manual#python-modules
 * https://github.com/sepinf-inc/IPED/wiki/Beginner's-Start-Guide
