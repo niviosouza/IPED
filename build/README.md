@@ -1,6 +1,6 @@
 # Tutorial de compilação do IPED
 
-Siga os passos a seguir para preparação e compilação do IPED.
+Siga os passos para preparação e compilação do IPED.
 
 ## Instalação do Sistema Operacional
 
