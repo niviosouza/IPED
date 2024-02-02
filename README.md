@@ -7,7 +7,7 @@ Siga os passos a seguir para preparação e compilação da ferramenta de invest
 
 A compilação foi executada em um Linux Mint 21.3, mas pode ser executada quase sem diferenças em qualquer distribuição derivada do Debian.
 
-## Preparação do sistema
+## Preparação do Sistema Operacional
 
 ### Escale para root
 
@@ -52,6 +52,8 @@ set number
 set background=dark
 [...]
 
+## Instalação de outras dependências
+
 ### Instale um módulo do Python
 
 pip install numpy
@@ -88,6 +90,8 @@ source /etc/profile
 ### Reinicie o sistema operacional
 
 reboot
+
+## Compilação e instalação de outras dependências
 
 ### Escale para root
 
@@ -155,6 +159,8 @@ make
 make install 
 ldconfig
 
+## Compilação do IPED
+
 ### Reinicie o sistema operacional
 
 reboot
@@ -181,7 +187,7 @@ mvn clean install
 
 OBSERVAÇÃO: em um máquina virtual com 4 VCPUs e 16 GB RAM, a compilação demorou por volta de 90 minutos.
 
-### Configure o IPED
+## Configuração do IPED
 
 vim /usr/src/IPED/target/release/iped-4.2-snapshot/LocalConfig.txt
 [...]
@@ -190,7 +196,7 @@ locale = pt-BR
 tskJarPath = /usr/share/java/sleuthkit-4.12.0.jar
 [...]
 
-### Criando um HD virtual para testes
+## Criação de um HD virtual para testes
 
 mkdir -p /home/<usuario>/caso1
 
@@ -230,15 +236,15 @@ Pronto para indexação!
 
 exit
 
-### Execute o IPED para indexação
+## Execução do IPED para indexação
 
 sudo java -jar /usr/src/IPED/target/release/iped-4.2-snapshot/iped.jar -d /home/<usuario>/caso1/teste.img -o /home/<usuario>/caso1/indexado
 
-### Execute o IPED para análise!
+## Execução do IPED para análise!
 
 sudo java -jar /home/<usuario>/caso1/indexado/iped/lib/iped-search-app.jar 
 
-# Referências
+## Referências
 
 https://github.com/sepinf-inc/IPED/wiki/User-Manual#python-modules
 https://github.com/sepinf-inc/IPED/wiki/Beginner's-Start-Guide
