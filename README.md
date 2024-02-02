@@ -2,7 +2,6 @@
 
 Siga os passos a seguir para preparação e compilação da ferramenta de investigação forense IPED (https://github.com/sepinf-inc/IPED/).
 
-
 ## Instalação do Sistema Operacional
 
 A compilação foi executada em um Linux Mint 21.3, mas pode ser executada quase sem diferenças em qualquer distribuição derivada do Debian.
@@ -16,6 +15,7 @@ sudo su -
 ### Atualize o sistema
 
 apt update
+
 apt dist-upgrade -y
 
 ### Permita o acesso à interface gráfica ao usuário 'root' por meio dos comandos 'su' e 'sudo'
@@ -23,11 +23,16 @@ apt dist-upgrade -y
 #### Insira a seguinte linha no fim dos arquivos
 
 vim /etc/pam.d/su
+
 [...]
+
 session optional pam_xauth.so
 
+
 vim /etc/pam.d/sudo
+
 [...]
+
 session optional pam_xauth.so
 
 ### Baixe a chave do software JFX indicado pela equipe do IPED
@@ -47,9 +52,13 @@ apt install libssl-dev libafflib-dev libewf-dev libvhdi-dev libvslvm-dev libvmdk
 ### Facilite o uso do vim
 
 vim /etc/vim/vimrc
+
 [...]
+
 set number
+
 set background=dark
+
 [...]
 
 ## Instalação de outras dependências
@@ -61,8 +70,11 @@ pip install numpy
 ### Insira uma variável de ambiente no sistema
 
 vim /etc/profile
+
 [...]
+
 \#export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+
 export JAVA_HOME=/usr/lib/jvm/bellsoft-java11-full-amd64
 
 ### Carregue a variável de ambiente
@@ -80,7 +92,9 @@ ln -svf /usr/local/lib/python3.10/dist-packages/jep/libjep.so /usr/lib/libjep.so
 ### Insira outra variável de ambiente no sistema 
 
 vim /etc/profile
+
 [...]
+
 export LD_LIBRARY_PATH=/usr/local/lib/python3.10/dist-packages/jep/
 
 ### Carregue a variável de ambiente
@@ -112,30 +126,43 @@ cd sleuthkit/
 ### Prepara e configure o código-fonte do sleuthkit para compilação
 
 ./bootstrap
+
 ./configure --prefix=/usr
 
 ### O resultado final esperado é:
 
 Building:
+
    openssl support:                       yes
 
    afflib support:                        yes
+
    libewf support:                        yes
+
    zlib support:                          yes
 
    libbfio support:                       yes
+
    libvhdi support:                       yes
+
    libvmdk support:                       yes
+
    libvslvm support:                      yes
+
 Features:
+
    Java/JNI support:                      yes
+
    Multithreading:                        yes
 
 ### Compile o sleuthkit
 
 PROC=$(cat /proc/cpuinfo | grep processor | wc -l)
+
 PROC=$((PROC+1))
+
 make -j${PROC}
+
 make install
 
 ### Entre no diretório de códigos-fonte
@@ -153,10 +180,15 @@ cd libagdb/
 ### Compile
 
 ./synclibs.sh
+
 ./autogen.sh
+
 ./configure --prefix=/usr --enable-wide-character-type
+
 make
+
 make install 
+
 ldconfig
 
 ## Compilação do IPED
@@ -185,15 +217,21 @@ cd IPED
 
 mvn clean install
 
+
 OBSERVAÇÃO: em um máquina virtual com 4 VCPUs e 16 GB RAM, a compilação demorou por volta de 90 minutos.
 
 ## Configuração do IPED
 
 vim /usr/src/IPED/target/release/iped-4.2-snapshot/LocalConfig.txt
+
 [...]
+
 locale = pt-BR
+
 [...]
+
 tskJarPath = /usr/share/java/sleuthkit-4.12.0.jar
+
 [...]
 
 ## Criação de um HD virtual para testes
@@ -205,6 +243,7 @@ dd if=/dev/zero of=/home/<usuario>/caso1/teste.img bs=100M count=1
 ### Verifique o arquivo de loop
 
 losetup -a
+
 /dev/loop0: [2050]:3015005 (/home/<usuario>/caso1/teste.img)
 
 ### Formate a partição
@@ -218,6 +257,7 @@ mount -t ext4 /dev/loop0 /mnt
 ### Verifique a montagem
 
 mount | grep loop0
+
 /dev/loop0 on /mnt type ext4 (rw,relatime)
 
 ### Copie conteúdos para o ponto de montagem /mnt para simular um HD qualquer
@@ -247,10 +287,18 @@ sudo java -jar /home/<usuario>/caso1/indexado/iped/lib/iped-search-app.jar
 ## Referências
 
 https://github.com/sepinf-inc/IPED/wiki/User-Manual#python-modules
+
 https://github.com/sepinf-inc/IPED/wiki/Beginner's-Start-Guide
+
 https://github.com/sepinf-inc/IPED/
+
 https://github.com/iped-docker/iped
+
 https://github.com/sepinf-inc/sleuthkit
+
 https://github.com/sepinf-inc/IPED/wiki/Linux
+
 https://bell-sw.com/pages/repositories/#apt
+
 https://github.com/ninia/jep/wiki/Linux
+
