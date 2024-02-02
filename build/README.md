@@ -78,7 +78,7 @@ pip install numpy
 vim /etc/profile
 
 [...]
-\#export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+#export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 export JAVA_HOME=/usr/lib/jvm/bellsoft-java11-full-amd64
 ```
 
