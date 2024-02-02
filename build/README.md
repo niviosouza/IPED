@@ -261,7 +261,7 @@ tskJarPath = /usr/share/java/sleuthkit-4.12.0.jar
 [...]
 ```
 
-# Pós-compilação
+# Passos pós-compilação
 
 ## Criação de diretórios do sistema
 
@@ -325,27 +325,27 @@ umount /mnt
 losetup -d /dev/loop0 
 ```
 
-Pronto para indexação!
-
 ### Saia do root
 
 ```
 exit
 ```
 
-## Execução do IPED para indexação
+**IPED pronto para indexação!**
+
+# Execução do IPED para indexação
 
 ```
 sudo java -jar /usr/src/IPED/target/release/iped-4.2-snapshot/iped.jar -d /home/<usuario>/caso1/teste.img -o /home/<usuario>/caso1/indexado
 ```
 
-## Execução do IPED para análise
+# Execução do IPED para análise
 
 ```
 sudo java -jar /home/<usuario>/caso1/indexado/iped/lib/iped-search-app.jar 
 ```
 
-## Referências
+# Referências
 
 * https://github.com/sepinf-inc/IPED/wiki/User-Manual#python-modules
 * https://github.com/sepinf-inc/IPED/wiki/Beginner's-Start-Guide
