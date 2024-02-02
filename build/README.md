@@ -146,7 +146,7 @@ git clone -b 4.12.0_iped_patch https://github.com/sepinf-inc/sleuthkit
 cd sleuthkit/
 ```
 
-### Prepara e configure o código-fonte do sleuthkit para compilação
+### Prepare e configure o código-fonte do sleuthkit para compilação
 
 ```
 ./bootstrap
@@ -248,7 +248,7 @@ cd IPED
 mvn clean install
 ```
 
-OBSERVAÇÃO: em um máquina virtual com 4 VCPUs e 16 GB RAM, a compilação demorou por volta de 90 minutos.
+**OBSERVAÇÃO: em um máquina virtual com 4 VCPUs e 16 GB RAM, a compilação demorou por volta de 90 minutos.**
 
 ## Configuração do IPED
 
@@ -261,10 +261,15 @@ tskJarPath = /usr/share/java/sleuthkit-4.12.0.jar
 [...]
 ```
 
-## Criação de um HD virtual para testes
+## Crição de uma pasta para o caso
 
 ```
 mkdir -p /home/<usuario>/caso1
+```
+
+## Criação de um HD virtual para testes
+
+```
 dd if=/dev/zero of=/home/<usuario>/caso1/teste.img bs=100M count=1
 ```
 
@@ -295,6 +300,10 @@ mount | grep loop0
 ```
 
 ### Copie conteúdos para o ponto de montagem /mnt para simular um HD qualquer
+
+```
+cp -a <origem> /mnt/
+```
 
 ### Desmonte
 
