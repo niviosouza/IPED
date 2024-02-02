@@ -250,7 +250,9 @@ mvn clean install
 
 **OBSERVAÇÃO: em um máquina virtual com 4 VCPUs e 16 GB RAM, a compilação demorou por volta de 90 minutos.**
 
-## Configuração do IPED
+# Passos pós-compilação
+
+## Configuração básica do IPED
 
 ```
 vim /usr/src/IPED/target/release/iped-4.2-snapshot/LocalConfig.txt
@@ -260,8 +262,6 @@ locale = pt-BR
 tskJarPath = /usr/share/java/sleuthkit-4.12.0.jar
 [...]
 ```
-
-# Passos pós-compilação
 
 ## Criação de diretórios do sistema
 
