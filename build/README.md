@@ -331,12 +331,12 @@ sudo java -jar /home/<usuario>/caso1/indexado/iped/lib/iped-search-app.jar
 ## Referências
 
 ```
-https://github.com/sepinf-inc/IPED/wiki/User-Manual#python-modules
-https://github.com/sepinf-inc/IPED/wiki/Beginner's-Start-Guide
-https://github.com/sepinf-inc/IPED/
-https://github.com/iped-docker/iped
-https://github.com/sepinf-inc/sleuthkit
-https://github.com/sepinf-inc/IPED/wiki/Linux
-https://bell-sw.com/pages/repositories/#apt
-https://github.com/ninia/jep/wiki/Linux
+* https://github.com/sepinf-inc/IPED/wiki/User-Manual#python-modules
+* https://github.com/sepinf-inc/IPED/wiki/Beginner's-Start-Guide
+* https://github.com/sepinf-inc/IPED/
+* https://github.com/iped-docker/iped
+* https://github.com/sepinf-inc/sleuthkit
+* https://github.com/sepinf-inc/IPED/wiki/Linux
+* https://bell-sw.com/pages/repositories/#apt
+* https://github.com/ninia/jep/wiki/Linux
 ```
