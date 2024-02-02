@@ -4,7 +4,7 @@ Siga os passos para preparação e compilação do IPED.
 
 ## Instalação do Sistema Operacional
 
-A compilação foi executada em um Linux Mint 21.3, mas pode ser executada quase sem diferenças em qualquer distribuição derivada do Debian.
+A compilação foi executada em um Linux Mint 21.3, mas pode ser executada, quase sem diferenças, em qualquer distribuição derivada do Debian.
 
 ## Preparação do Sistema Operacional
 
