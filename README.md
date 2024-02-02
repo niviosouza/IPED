@@ -10,30 +10,30 @@ A compilação foi executada em um Linux Mint 21.3, mas pode ser executada quase
 
 ### Escale para root
 
+```
 sudo su -
+```
 
 ### Atualize o sistema
 
+```
 apt update
-
 apt dist-upgrade -y
+```
 
 ### Permita o acesso à interface gráfica ao usuário 'root' por meio dos comandos 'su' e 'sudo'
 
 #### Insira a seguinte linha no fim dos arquivos
 
+```
 vim /etc/pam.d/su
-
 [...]
-
 session optional pam_xauth.so
-
 
 vim /etc/pam.d/sudo
-
 [...]
-
 session optional pam_xauth.so
+```
 
 ### Baixe a chave do software JFX indicado pela equipe do IPED
 
