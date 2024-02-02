@@ -1,6 +1,6 @@
 # Tutorial de compilação do IPED
 
-Siga os passos a seguir para preparação e compilação da ferramenta de investigação forense IPED (https://github.com/sepinf-inc/IPED/).
+Siga os passos a seguir para preparação e compilação do IPED.
 
 ## Instalação do Sistema Operacional
 
