@@ -234,7 +234,7 @@ cd IPED
 mvn clean install
 ```
 
-**OBSERVAÇÃO: em um máquina virtual com 4 VCPUs e 16 GB RAM, a compilação demorou por volta de 90 minutos.**
+**OBSERVAÇÃO: em um máquina virtual com 4 VCPUs e 16 GB RAM, a compilação demorou por volta de 45 minutos.**
 
 ## Passos pós-compilação
 
@@ -331,7 +331,9 @@ losetup -d /dev/loop0
 exit
 ```
 
-**IPED pronto para indexação!**
+## Resumo
+
+O processo de preparação, compilação e pós-compilação levou em torno de 90 minutos!
 
 ## Execução do IPED para indexação
 
