@@ -233,6 +233,8 @@ cd IPED
 ### Compile o IPED
 
 ```
+PROC=$(cat /proc/cpuinfo | grep processor | wc -l)
+PROC=$((PROC+1))
 mvn -T ${PROC} clean install
 ```
 
