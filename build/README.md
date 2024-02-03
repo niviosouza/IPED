@@ -23,18 +23,6 @@ apt dist-upgrade -y
 
 ### Permita o acesso à interface gráfica ao usuário 'root' por meio dos comandos 'su' e 'sudo'
 
-#### Insira a seguinte linha no fim dos arquivos
-
-```
-vim /etc/pam.d/su
-[...]
-session optional pam_xauth.so
-
-vim /etc/pam.d/sudo
-[...]
-session optional pam_xauth.so
-```
-
 ### Baixe a chave do software JFX indicado pela equipe do IPED
 
 ```
@@ -52,6 +40,18 @@ apt update
 
 ```
 apt install libssl-dev libafflib-dev libewf-dev libvhdi-dev libvslvm-dev libvmdk-dev ant build-essential make automake m4 tesseract-ocr tesseract-ocr-por tesseract-ocr-eng tesseract-ocr-script-latn imagemagick mplayer vlc libreoffice-java-common libreoffice-gtk2 libpff1 libesedb-utils libparse-win32registry-perl libmsiecf-utils libscca-utils libevt-utils rifiuti2 graphviz maven bellsoft-java11-full python3-pip python3.10-venv openjdk-11-jre openjdk-11-jdk openjdk-11-source openjdk-11-dbg openjfx libopenjfx-java libopenjfx-jni libjavafxsvg-java libopenjfx-java-doc vim-scripts vim-runtime vim-addon-manager vim git libtool python3-libewf libevtx1 python3-evtx libevtx-utils libevtx-dev python3-libevtx automake1.11 autopoint pkg-config ewf-tools smbclient
+```
+
+#### Insira a seguinte linha no fim dos arquivos
+
+```
+vim /etc/pam.d/su
+[...]
+session optional pam_xauth.so
+
+vim /etc/pam.d/sudo
+[...]
+session optional pam_xauth.so
 ```
 
 ### Facilite o uso do vim
