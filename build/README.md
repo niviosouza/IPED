@@ -193,7 +193,7 @@ cd libagdb/
 ./synclibs.sh
 ./autogen.sh
 ./configure --prefix=/usr --enable-wide-character-type
-make
+make -j${PROC}
 make install 
 ldconfig
 ```
@@ -233,7 +233,7 @@ cd IPED
 ### Compile o IPED
 
 ```
-mvn clean install
+mvn -T ${PROC} clean install
 ```
 
 **OBSERVAÇÃO: em um máquina virtual com 4 VCPUs e 16 GB RAM, a compilação demorou por volta de 45 minutos.**
