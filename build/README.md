@@ -233,9 +233,7 @@ cd IPED
 ### Compile o IPED
 
 ```
-PROC=$(cat /proc/cpuinfo | grep processor | wc -l)
-PROC=$((PROC+1))
-mvn -T ${PROC} clean install
+mvn clean install
 ```
 
 **OBSERVAÇÃO: em um máquina virtual com 4 VCPUs e 16 GB RAM, a compilação demorou por volta de 45 minutos.**
