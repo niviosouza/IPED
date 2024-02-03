@@ -37,7 +37,7 @@ apt update
 ### Instale os pacotes necessários
 
 ```
-apt install ant automake automake1.11 autopoint bellsoft-java11-full build-essential ewf-tools git graphviz imagemagick libafflib-dev libesedb-utils libevt-utils libevtx1 libevtx-dev libevtx-utils libewf-dev libjavafxsvg-java libmsiecf-utils libopenjfx-java libopenjfx-java-doc libopenjfx-jni libparse-win32registry-perl libpff1 libreoffice-gtk2 libreoffice-java-common libscca-utils libssl-dev libtool libvhdi-dev libvmdk-dev libvslvm-dev m4 make maven mplayer openjdk-11-dbg openjdk-11-jdk openjdk-11-jre openjdk-11-source openjfx pkg-config python3.10-venv python3-evtx python3-libevtx python3-libewf python3-pip rifiuti2 smbclient tesseract-ocr tesseract-ocr-eng tesseract-ocr-por tesseract-ocr-script-latn vim vim-addon-manager vim-runtime vim-scripts vlc
+apt install ant automake automake1.11 autopoint bellsoft-java11-full build-essential ewf-tools git graphviz imagemagick libafflib-dev libesedb-utils libevt-utils libevtx1 libevtx-dev libevtx-utils libewf-dev libjavafxsvg-java libmsiecf-utils libopenjfx-java libopenjfx-java-doc libopenjfx-jni libparse-win32registry-perl libpff1 libreoffice-gtk2 libreoffice-java-common libscca-utils libssl-dev libtool libvhdi-dev libvmdk-dev libvslvm-dev m4 make maven mplayer mplayer-gui openjdk-11-dbg openjdk-11-jdk openjdk-11-jre openjdk-11-source openjfx pkg-config python3.10-venv python3-evtx python3-libevtx python3-libewf python3-pip python3-vlc rifiuti2 smbclient tesseract-ocr tesseract-ocr-eng tesseract-ocr-por tesseract-ocr-script-latn vim vim-addon-manager vim-runtime vim-scripts vlc
 ```
 
 **OBSERVAÇÃO: esta instalação vai demorar de 15 a 20 minutos.**
